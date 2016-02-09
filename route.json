@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Asutralia",
+        "view_url": "australia.html",
+        "url" : "austaralia"
+    },
+    {
+        "name": "Bulgaria",
+        "view_url": "bulgaria.html",
+        "url" : "bulgaria"
+    },
+    {
+        "name": "New Zealand",
+        "view_url": "new_zealand.html",
+        "url" : "new_zealand"
+    }
+]
