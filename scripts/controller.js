@@ -20,7 +20,9 @@ $(document).ready(function () {
     });
 
     window.addEventListener("load", function () {
+        
         var my_path = window.location.hash;
+        
         if (my_path !== "#new_zealand" && my_path !== "#bulgaria") {
             $("#container").load("./views/australia.html");
         } else if (my_path === "#new_zealand") {
@@ -28,7 +30,7 @@ $(document).ready(function () {
         } else if (my_path === "#bulgaria") {
             $("#container").load("./views/bulgaria.html");
         } else if (my_path === "#australa") {
-            $("#container").load("./views/australi.html");
+            $("#container").load("./views/australia.html");
         }
     }, false);
 
