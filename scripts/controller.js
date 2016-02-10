@@ -1,11 +1,14 @@
 function makeAjaxCall(ajaxParam) {
+    "use strict";
+
     $("#container").load("./views/" + ajaxParam);
+
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
+    "use strict";
 
-
-    $.getJSON("route.json", function (params) {
+    $.getJSON("route.json", function(params) {
         for (var i = 0; i < params.length; i++) {
             $("#nav").append("<a  id='nav" + (i) + "'>" + params[i].name + "</a>&nbsp;");
 
@@ -13,23 +16,70 @@ $(document).ready(function () {
 
             $("#nav" + (i)).attr("data-view", params[i].view_url);
 
-            $("#nav" + (i)).click(function () {
+            $("#nav" + (i)).click(function() {
                 makeAjaxCall($(this).attr("data-view"));
+                self.close();
             });
         }
     });
 
-    window.addEventListener("load", function () {
-        var my_path = window.location.hash;
-        if (my_path !== "#new_zealand" && my_path !== "#bulgaria") {
+    window.addEventListener("load", function() {
+
+
+        var myPath = window.location.hash;
+
+        if (myPath !== "#new_zealand" && myPath !== "#bulgaria") {
+
             $("#container").load("./views/australia.html");
-        } else if (my_path === "#new_zealand") {
+            self.close();
+
+        } else if (myPath === "#new_zealand") {
+
             $("#container").load("./views/new_zealand.html");
-        } else if (my_path === "#bulgaria") {
+            self.close();
+
+        } else if (myPath === "#bulgaria") {
+
             $("#container").load("./views/bulgaria.html");
-        } else if (my_path === "#australa") {
+            self.close();
+
+        } else if (myPath === "#australa") {
+
             $("#container").load("./views/australi.html");
+            self.close();
         }
     }, false);
 
+
 });
+
+
+// trick back button
+setInterval("checkUrl()", 50);
+
+function checkUrl() {
+    "use strict";
+
+    var myPath = window.location.hash;
+
+    if (myPath !== "#new_zealand" && myPath !== "#bulgaria") {
+
+        $("#container").load("./views/australia.html");
+
+
+    } else if (myPath === "#new_zealand") {
+
+        $("#container").load("./views/new_zealand.html");
+
+
+    } else if (myPath === "#bulgaria") {
+
+        $("#container").load("./views/bulgaria.html");
+
+
+    } else if (myPath === "#australa") {
+
+        $("#container").load("./views/australi.html");
+
+    }    
+}
