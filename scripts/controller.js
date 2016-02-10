@@ -18,7 +18,7 @@ $(document).ready(function() {
 
             $("#nav" + (i)).click(function() {
                 makeAjaxCall($(this).attr("data-view"));
-                self.close();
+                
             });
         }
     });
@@ -31,12 +31,12 @@ $(document).ready(function() {
         if (myPath !== "#new_zealand" && myPath !== "#bulgaria") {
 
             $("#container").load("./views/australia.html");
-            self.close();
+           
 
         } else if (myPath === "#new_zealand") {
 
             $("#container").load("./views/new_zealand.html");
-            self.close();
+            
 
         } else if (myPath === "#bulgaria") {
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
         } else if (myPath === "#australa") {
 
             $("#container").load("./views/australi.html");
-            self.close();
+           
         }
     }, false);
 
