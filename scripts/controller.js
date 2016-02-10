@@ -41,8 +41,7 @@ $(document).ready(function() {
         } else if (myPath === "#bulgaria") {
 
             $("#container").load("./views/bulgaria.html");
-            self.close();
-
+            
         } else if (myPath === "#australa") {
 
             $("#container").load("./views/australi.html");
