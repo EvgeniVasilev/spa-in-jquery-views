@@ -23,7 +23,6 @@ $(document).ready(function() {
         }
     });
 
-<<<<<<< HEAD
     window.addEventListener("load", function() {
 
 
@@ -31,13 +30,6 @@ $(document).ready(function() {
 
         if (myPath !== "#new_zealand" && myPath !== "#bulgaria") {
 
-=======
-    window.addEventListener("load", function () {
-        
-        var my_path = window.location.hash;
-        
-        if (my_path !== "#new_zealand" && my_path !== "#bulgaria") {
->>>>>>> origin/gh-pages
             $("#container").load("./views/australia.html");
             self.close();
 
@@ -49,7 +41,6 @@ $(document).ready(function() {
         } else if (myPath === "#bulgaria") {
 
             $("#container").load("./views/bulgaria.html");
-<<<<<<< HEAD
             self.close();
 
         } else if (myPath === "#australa") {
@@ -92,11 +83,3 @@ function checkUrl() {
 
     }    
 }
-=======
-        } else if (my_path === "#australa") {
-            $("#container").load("./views/australia.html");
-        }
-    }, false);
-
-});
->>>>>>> origin/gh-pages
